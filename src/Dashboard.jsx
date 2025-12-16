@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = import.meta.env.VITE_API_URL || "https://milkman-backend-rweo.onrender.com";
+const API_URL = import.meta.env.VITE_API_URL || "https://milkman-backend-rweo.onrender.com/api";
 
 export default function Dashboard() {
   const [profile, setProfile] = useState(null);
@@ -18,10 +18,9 @@ export default function Dashboard() {
     }
     
     axios
-     .get(`${API_URL}/api/user/me`, {
-  headers: { Authorization: `Bearer ${token}` }
-     })
-
+      .get(`${API_URL}/auth/profile`, {
+        headers: { Authorization: `Bearer ${token}` }
+      })
       .then(res => {
         setProfile(res.data.user);
         setLoading(false);

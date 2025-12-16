@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = import.meta.env.VITE_API_URL || "https://milkman-backend-rweo.onrender.com/api";
+const API_URL = import.meta.env.VITE_API_URL || "https://milkman-backend-rweo.onrender.com";
 
 export default function Dashboard() {
   const [profile, setProfile] = useState(null);

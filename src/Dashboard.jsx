@@ -18,9 +18,10 @@ export default function Dashboard() {
     }
     
     axios
-      .get(`${API_URL}/auth/profile`, {
-        headers: { Authorization: `Bearer ${token}` }
-      })
+     .get(`${API_URL}/api/user/me`, {
+  headers: { Authorization: `Bearer ${token}` }
+     })
+
       .then(res => {
         setProfile(res.data.user);
         setLoading(false);

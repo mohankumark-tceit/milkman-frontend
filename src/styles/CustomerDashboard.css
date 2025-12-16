@@ -1,0 +1,289 @@
+.customer-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #57a7f7, #ffffff);
+  padding: 0;
+}
+
+.customer-dashboard .navbar {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.customer-dashboard .navbar h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.customer-dashboard .logout-btn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.customer-dashboard .logout-btn:hover {
+  background: #ff5252;
+}
+
+/* Live location header button */
+.customer-dashboard .live-btn {
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.customer-dashboard .live-btn.active {
+  background: linear-gradient(90deg,#00b894,#05a07a);
+  color: #fff;
+  border-color: rgba(0,0,0,0.06);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+.customer-dashboard .live-btn:hover { opacity: 0.95 }
+
+.customer-dashboard .tabs {
+  display: flex;
+  gap: 0;
+  background: white;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.customer-dashboard .tabs .tab {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+  color: #333;
+}
+
+.customer-dashboard .tabs .tab.active {
+  border-bottom-color: #667eea;
+  color: #667eea;
+}
+
+.customer-dashboard .tabs .tab:hover {
+  background: #f5f5f5;
+}
+
+.customer-dashboard .tab-content {
+  padding: 2rem;
+  background: white;
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.customer-dashboard .purchase-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.customer-dashboard .purchase-form input {
+  flex: 1;
+  min-width: 150px;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.customer-dashboard .purchase-form button {
+  background: #667eea;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.customer-dashboard .purchase-form button:hover {
+  background: #5568d3;
+}
+
+.customer-dashboard .total-unpaid {
+  background: #fff3cd;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid #ffc107;
+}
+
+.customer-dashboard .total-unpaid h3 {
+  margin: 0;
+  color: #856404;
+  font-size: 1.5rem;
+}
+
+.customer-dashboard .pay-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.customer-dashboard .pay-btn:hover {
+  background: #218838;
+}
+
+.customer-dashboard .purchases-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.customer-dashboard .purchases-list table th,
+.customer-dashboard .purchases-list table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.customer-dashboard .purchases-list table th {
+  background: #f5f5f5;
+  font-weight: bold;
+}
+
+.customer-dashboard .purchases-list table tr.paid {
+  background: #d4edda;
+}
+
+.customer-dashboard .purchases-list table tr.unpaid {
+  background: #f8d7da;
+}
+
+.customer-dashboard .announcement-card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #667eea;
+}
+
+.customer-dashboard .live-location-card {
+  background: linear-gradient(90deg, #e6fffa, #f0fff4);
+  border-left: 6px solid #00b894;
+  padding: 0.9rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.customer-dashboard .live-location-card .live-head { font-weight: 700; color: #056a4e }
+.customer-dashboard .live-location-card .live-body { display:flex; align-items:center; gap:12px; justify-content:space-between }
+.customer-dashboard .live-location-card .live-link a { background: #00b894; color: #fff; padding: 0.45rem 0.7rem; border-radius: 6px; text-decoration: none }
+.customer-dashboard .live-location-card .live-link a:hover { opacity: 0.95 }
+.customer-dashboard .live-location-card .live-meta { font-size: 0.85rem; color: #2d6a52 }
+
+.customer-dashboard .announcement-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.customer-dashboard .announcement-card p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.customer-dashboard .announcement-card small {
+  color: #999;
+}
+
+.customer-dashboard .loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+.customer-dashboard .community-section {
+  margin-top: 1rem;
+}
+
+.customer-dashboard .community-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 600px;
+}
+
+.customer-dashboard .community-form input,
+.customer-dashboard .community-form textarea {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.customer-dashboard .community-form button {
+  align-self: flex-end;
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.customer-dashboard .community-form button:hover { background: #5568d3 }
+
+/* ---------- Mobile responsiveness (<= 600px) ---------- */
+@media (max-width: 600px) {
+  .customer-dashboard .navbar { padding: 0.65rem 1rem; }
+  .customer-dashboard .navbar h1 { font-size: 1.2rem; }
+  .customer-dashboard .logout-btn { padding: 0.45rem 0.9rem; font-size: 0.9rem; }
+
+  .customer-dashboard .tabs { flex-direction: column; }
+  .customer-dashboard .tabs .tab { padding: 0.65rem 0.75rem; font-size: 0.95rem; text-align: left; }
+
+  .customer-dashboard .tab-content { padding: 1rem; margin: 0.75rem; border-radius: 0.8rem; }
+
+  .customer-dashboard .purchase-form { flex-direction: column; gap: 0.6rem; }
+  .customer-dashboard .purchase-form input { min-width: 0; width: 100%; }
+  .customer-dashboard .purchase-form button { width: 100%; }
+
+  .customer-dashboard .total-unpaid { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+  .customer-dashboard .total-unpaid h3 { font-size: 1.1rem; }
+
+  /* Make purchase table horizontally scrollable on small screens */
+  .customer-dashboard .purchases-list { overflow-x: auto; }
+  .customer-dashboard .purchases-list table { min-width: 600px; }
+
+  .customer-dashboard .announcement-card { padding: 0.8rem; }
+  .customer-dashboard .community-form { max-width: 100%; }
+}
+
+/* Extra small phones */
+@media (max-width: 420px) {
+  .customer-dashboard .navbar h1 { font-size: 1.05rem; }
+  .customer-dashboard .tabs .tab { font-size: 0.9rem; }
+  .customer-dashboard .tab-content { padding: 0.8rem; }
+  .customer-dashboard .purchase-form input { font-size: 0.95rem; }
+}
+

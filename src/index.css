@@ -1,0 +1,272 @@
+/* ======================================================= */
+/* --- 1. Container and Layout (Global Style for the Form) --- */
+/* ======================================================= */
+
+/* Apply a site-wide background gradient so all pages match design */
+body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #57a7f7, #ffffff);
+}
+
+.signup-container {
+    /* Center the form on the page and give it space */
+    width: 100%; /* Default to full width for small screens */
+    max-width: 380px; /* Max width for readability on larger screens */
+    margin: 50px auto; /* Center horizontally and add vertical space */
+    
+    /* Box appearance */
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+    background-color: #ffffff;
+    
+    /* Font style */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signup-container h2 {
+    text-align: center;
+    color: #1e3a8a; /* Deep blue header */
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* ======================================================= */
+/* --- 2. Form Structure and Element Styles --- */
+/* ======================================================= */
+.signup-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between form fields */
+}
+
+/* Style for all text inputs, password, and the select dropdown */
+.signup-container input[type="text"],
+.signup-container input[type="password"],
+.signup-container input[type="email"],
+.signup-container select {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Crucial for consistent sizing */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Focus state for better user experience */
+.signup-container input:focus,
+.signup-container select:focus {
+    border-color: #3b82f6; /* Blue border on focus */
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* ======================================================= */
+/* --- 3. Button and Link Styles --- */
+/* ======================================================= */
+.signup-container button[type="submit"] {
+    background-color: #10b981; /* Green button color */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.signup-container button[type="submit"]:hover {
+    background-color: #059669; /* Darker green on hover */
+}
+
+/* Already have an account text */
+.signup-container p {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Login link style */
+.signup-container a {
+    color: #3b82f6; /* Blue link color */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.signup-container a:hover {
+    color: #1e40af;
+    text-decoration: underline;
+}
+
+
+
+
+/* ======================================================= */
+/* --- Login Container and Layout Styling (.login-container) --- */
+/* ======================================================= */
+.login-container {
+    /* Center the form on the page and define dimensions */
+    width: 100%;
+    max-width: 380px;
+    margin: 50px auto;
+    
+    /* Box appearance (consistent with signup form) */
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    
+    /* Font style */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container h2 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* ======================================================= */
+/* --- Form and Input Styles --- */
+/* ======================================================= */
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between fields */
+}
+
+/* Style for email, text and password inputs */
+.login-container input[type="email"],
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Small email icon and spacing for the email input */
+.login-container input[type="email"] {
+    
+    background-position: 12px center;
+    padding-left: 40px; /* leave room for icon */
+}
+
+/* Placeholder color for consistency */
+.login-container input::placeholder {
+    color: #9ca3af;
+}
+
+/* Focus state */
+.login-container input:focus {
+    border-color: #3b82f6;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* ======================================================= */
+/* --- Button Style --- */
+/* ======================================================= */
+.login-container button[type="submit"] {
+    background-color: #3b82f6; /* Blue button color */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button[type="submit"]:hover {
+    background-color: #2563eb; /* Darker blue on hover */
+}
+
+
+/* ======================================================= */
+/* --- Dashboard Container and Layout Styling (.dashboard-container) --- */
+/* ======================================================= */
+.dashboard-container {
+    /* Center the dashboard content */
+    width: 100%;
+    max-width: 450px; /* Slightly wider than the forms for profile data */
+    margin: 50px auto;
+    
+    /* Box appearance (consistent with forms) */
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+    
+    /* Font style */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-container h2 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* ======================================================= */
+/* --- Profile Data Display Styles --- */
+/* ======================================================= */
+
+/* Style for the <pre> tag used for JSON display */
+.dashboard-container pre {
+    background-color: #f4f7f9;
+    padding: 15px;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+    overflow-x: auto; /* Allows horizontal scrolling for large data */
+    white-space: pre-wrap; /* Ensures long lines wrap */
+    word-break: break-all;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+/* ======================================================= */
+/* --- Logout Button Style --- */
+/* ======================================================= */
+.dashboard-container button {
+    background-color: #ef4444; /* Red color for a Logout/Danger action */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    width: 100%; /* Make it full width */
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-container button:hover {
+    background-color: #dc2626; /* Darker red on hover */
+}

@@ -1,0 +1,100 @@
+/* Remove browser default margins and scrollbars */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;     /* allow vertical scrolling on small screens */
+  background: linear-gradient(to bottom, #57a7f7, #ffffff);  /* fallback so no white shows */
+}
+
+
+.welcome {
+  min-height: 100vh;            /* full screen minimum */
+  width: 100vw;                 /* full width */
+  overflow: visible;            /* allow scrolling when content exceeds viewport */
+  background: linear-gradient(to bottom, #57a7f7, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Background transparent image layer */
+.welcome::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('/welcomepageimage.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.10;
+  z-index: 0;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+/* Title */
+.welcome-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* Subtitle */
+.welcome-subtitle {
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* Description text */
+.welcome-desc {
+  font-size: 1.3rem;
+  margin-top: 1.8rem;
+  opacity: 0.9;
+}
+
+/* Button */
+.welcome-btn {
+  margin-top: 2.5rem;
+  background: white;
+  color: #39006c;
+  padding: 1rem 3rem;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-radius: 2rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.welcome-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+.welcome-btn:active {
+  transform: scale(0.95);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .welcome-title { font-size: 2rem; }
+  .welcome-subtitle { font-size: 1.1rem; }
+  .welcome-desc { font-size: 1rem; }
+  .welcome-btn { padding: 0.8rem 2rem; font-size: 1rem; }
+}
+
+@media (max-width: 420px) {
+  .welcome-title { font-size: 1.6rem; }
+  .welcome-subtitle { font-size: 1rem; }
+  .welcome-desc { font-size: 0.95rem; }
+  .welcome-btn { padding: 0.6rem 1.4rem; font-size: 0.95rem; }
+}
